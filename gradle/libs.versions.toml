@@ -44,7 +44,7 @@ log4jApi = "2.23.1"
 log4jApiKotlin = "1.4.0"
 logback = "1.5.6"
 maven = "3.9.8"
-mavenResolver = "1.9.21"
+mavenResolver = "2.0.0"
 mockk = "1.13.11"
 mordant = "2.7.0"
 okhttp = "4.12.0"
@@ -148,8 +148,8 @@ maven-model = { module = "org.apache.maven:maven-model", version.ref = "maven" }
 maven-model-builder = { module = "org.apache.maven:maven-model-builder", version.ref = "maven" }
 maven-resolver-api = { module = "org.apache.maven.resolver:maven-resolver-api", version.ref = "mavenResolver" }
 maven-resolver-connector-basic = { module = "org.apache.maven.resolver:maven-resolver-connector-basic", version.ref = "mavenResolver" }
+maven-resolver-transport-apache = { module = "org.apache.maven.resolver:maven-resolver-transport-apache", version.ref = "mavenResolver" }
 maven-resolver-transport-file = { module = "org.apache.maven.resolver:maven-resolver-transport-file", version.ref = "mavenResolver" }
-maven-resolver-transport-http = { module = "org.apache.maven.resolver:maven-resolver-transport-http", version.ref = "mavenResolver" }
 maven-resolver-transport-wagon = { module = "org.apache.maven.resolver:maven-resolver-transport-wagon", version.ref = "mavenResolver" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 mordant = { module = "com.github.ajalt.mordant:mordant", version.ref = "mordant" }
@@ -176,4 +176,4 @@ xz = { module = "org.tukaani:xz", version.ref = "xz" }
 exposed = ["exposed-core", "exposed-dao", "exposed-jdbc", "exposed-javaTime", "exposed-json"]
 hoplite = ["hoplite-core", "hoplite-yaml"]
 ks3 = ["ks3-jdk", "ks3-standard"]
-mavenResolver = ["maven-resolver-connector-basic", "maven-resolver-transport-file", "maven-resolver-transport-http", "maven-resolver-transport-wagon"]
+mavenResolver = ["maven-resolver-connector-basic", "maven-resolver-transport-apache", "maven-resolver-transport-file", "maven-resolver-transport-wagon"]

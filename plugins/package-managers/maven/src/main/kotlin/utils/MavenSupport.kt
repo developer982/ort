@@ -580,9 +580,9 @@ class MavenSupport(private val workspaceReader: WorkspaceReader) {
 
             val localPath = repositorySystemSession.localRepositoryManager
                 .getPathForRemoteArtifact(artifact, info.repository, "project")
-            val downloadFile = File(repositorySystemSession.localRepositoryManager.repository.basedir, localPath)
+            val downloadPath = repositorySystemSession.localRepositoryManager.repository.basePath.resolve(localPath)
 
-            val artifactDownload = ArtifactDownload(artifact, "project", downloadFile, policy.checksumPolicy)
+            val artifactDownload = ArtifactDownload(artifact, "project", downloadPath.toFile(), policy.checksumPolicy)
             artifactDownload.isExistenceCheck = true
             artifactDownload.listener = object : AbstractTransferListener() {
                 override fun transferFailed(event: TransferEvent?) {
